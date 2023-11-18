@@ -5,6 +5,10 @@ import { prisma } from '#app/utils/db.server.ts'
 export async function loader({ request }: DataFunctionArgs) {
 	const userId = await requireUserId(request)
 	const user = await prisma.user.findUnique({ where: { id: userId } })
+	console.log('user:', user)
+
+	debugger;
+
 	if (!user) {
 		const requestUrl = new URL(request.url)
 		const loginParams = new URLSearchParams([

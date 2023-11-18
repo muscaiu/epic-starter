@@ -234,7 +234,7 @@ function CacheKeyRow({
 }
 
 export function ErrorBoundary({ error }: { error: Error }) {
-	console.error(error)
+	console.log('error:', error)
 
-	return <div>An unexpected error occurred: {error.message}</div>
+	return <div>An unexpected error occurred: {error?.message}</div>
 }

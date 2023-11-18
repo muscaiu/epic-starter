@@ -258,7 +258,6 @@ function App() {
 					<Outlet />
 				</div>
 
-
 			</div>
 			<Confetti id={data.confettiId} />
 			<EpicToaster toast={data.toast} />
