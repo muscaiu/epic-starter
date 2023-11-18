@@ -1,10 +1,10 @@
 import { Link, useMatches } from '@remix-run/react'
 import React from 'react'
 import { useOptionalUser } from '#app/utils/user.ts'
-import UserDropdown from '../nav/UserDropdown.tsx'
+import ThemeSwitch from '../root/ThemeSwitch.tsx'
 import { SearchBar } from '../search-bar.tsx'
 import { Button } from '../ui/button.tsx'
-import ThemeSwitch from './ThemeSwitch.tsx'
+import UserDropdown from './UserDropdown.tsx'
 
 export default function Nav({ data }: { data: any }) {
   const user = useOptionalUser()
