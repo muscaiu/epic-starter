@@ -16,9 +16,13 @@ export async function loader({ request }: DataFunctionArgs) {
 
 export default function Dashboard() {
   const user = useUser()
-  console.log('user:', user)
 
   return (
-    <div>Dashboard</div>
+    <main>
+      <div>
+        Dashboard
+      </div>
+      <div>{user.username}</div>
+    </main>
   )
 }
